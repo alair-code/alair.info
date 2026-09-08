@@ -1,6 +1,6 @@
 {
   "name": "Alair Informática",
-  "description": "Seu site pronto para fazer o seu negócio crescer. Criação de sites profissionais, sistemas modernos e desenvolvimento web de alta conversão.",
+  "description": "Criação de sites profissionais, sistemas modernos e desenvolvimento web sob medida.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }
