@@ -10,20 +10,6 @@ export interface ServiceItem {
   iconName: 'code' | 'server' | 'globe' | 'layout-grid' | 'shield-check' | 'zap';
 }
 
-export interface PortfolioProject {
-  id: string;
-  title: string;
-  clientName: string;
-  category: 'sites' | 'sistemas' | 'landing-pages' | 'ecommerce';
-  categoryLabel: string;
-  description: string;
-  results: string;
-  technologies: string[];
-  imageUrl: string;
-  features: string[];
-  liveUrl?: string;
-}
-
 export interface DifferentialItem {
   id: string;
   title: string;

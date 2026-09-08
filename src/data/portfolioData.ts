@@ -1,4 +1,4 @@
-import { ServiceItem, PortfolioProject, DifferentialItem, FAQItem } from '../types';
+import { ServiceItem, DifferentialItem, FAQItem } from '../types';
 
 export const BRAND_INFO = {
   name: 'Alair Informática',
@@ -55,21 +55,6 @@ export const COMPETITIVE_DIFFERENTIALS: DifferentialItem[] = [
   { id: 'qualidade', title: 'Cuidado técnico e visual', description: 'Atenção à interface, organização do código, responsividade e experiência de uso.', iconName: 'gem' },
   { id: 'transparencia', title: 'Transparência no processo', description: 'Etapas claras e comunicação sobre o andamento do desenvolvimento.', iconName: 'shield' },
   { id: 'estabilidade', title: 'Responsividade e manutenção', description: 'Projetos estruturados para diferentes tamanhos de tela e evolução futura.', iconName: 'smartphone' }
-];
-
-export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
-  {
-    id: 'sst-digital',
-    title: 'SST Digital',
-    clientName: 'Projeto próprio',
-    category: 'sistemas',
-    categoryLabel: 'Sistema Funcional',
-    description: 'Sistema web próprio voltado à gestão de processos de Saúde e Segurança do Trabalho, desenvolvido como projeto real de engenharia de software.',
-    results: 'Projeto em evolução contínua. Não são apresentados números de resultados comerciais sem métricas públicas verificáveis.',
-    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Supabase', 'Vercel'],
-    imageUrl: '/sst-digital-dashboard.jpg',
-    features: ['Aplicação web com módulos de gestão', 'Arquitetura baseada em banco de dados', 'Interface responsiva', 'Desenvolvimento e manutenção contínuos']
-  }
 ];
 
 export const FAQS_DATA: FAQItem[] = [

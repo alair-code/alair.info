@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageSquare, Menu, X, Instagram, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { MessageSquare, Menu, X, Instagram, ArrowUpRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/portfolioData';
 import { getWhatsAppLink } from '../utils/helpers';
 
@@ -19,7 +19,6 @@ export const Navbar: React.FC = () => {
     { label: 'Início', href: '#inicio' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Serviços', href: '#servicos' },
-    { label: 'Projetos', href: '#projetos' },
     { label: 'Dúvidas', href: '#faq' },
     { label: 'Contato', href: '#contato' },
   ];

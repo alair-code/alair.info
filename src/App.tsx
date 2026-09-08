@@ -8,7 +8,6 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { ServicesSection } from './components/ServicesSection';
-import { PortfolioSection } from './components/PortfolioSection';
 import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -31,22 +30,18 @@ export default function App() {
         {/* 3. Serviços */}
         <ServicesSection />
 
-        {/* 4. Portfólio / Projetos */}
-        <PortfolioSection />
-
-        {/* 5. Dúvidas Frequentes & Garantias */}
+        {/* 4. Dúvidas Frequentes & Garantias */}
         <FaqSection />
 
-        {/* 6. Formulário de contato */}
+        {/* 5. Formulário de contato */}
         <ContactSection />
       </main>
 
       {/* Corporate Agency Footer */}
       <Footer />
 
-      {/* 7. WhatsApp flutuante com atendimento interativo */}
+      {/* 6. WhatsApp flutuante com atendimento interativo */}
       <FloatingWhatsApp />
     </div>
   );
 }
-
