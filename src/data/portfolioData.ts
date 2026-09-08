@@ -67,7 +67,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     description: 'Sistema web próprio voltado à gestão de processos de Saúde e Segurança do Trabalho, desenvolvido como projeto real de engenharia de software.',
     results: 'Projeto em evolução contínua. Não são apresentados números de resultados comerciais sem métricas públicas verificáveis.',
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Supabase', 'Vercel'],
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80',
+    imageUrl: '/sst-digital-dashboard.jpg',
     features: ['Aplicação web com módulos de gestão', 'Arquitetura baseada em banco de dados', 'Interface responsiva', 'Desenvolvimento e manutenção contínuos']
   }
 ];
