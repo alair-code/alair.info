@@ -72,12 +72,14 @@ export const AboutSection: React.FC = () => {
 
             {/* Professional portrait */}
             <div className="w-full mb-6">
-              <img
-                src="/assets/alair-foto.png"
-                alt="Alair Soares — desenvolvedor e criador do SST Digital"
-                className="w-full max-h-[420px] object-cover rounded-2xl shadow-xl border border-border-card"
-                loading="eager"
-              />
+              <div className="w-full rounded-2xl bg-surface-subtle border border-border-card shadow-xl overflow-hidden flex items-center justify-center p-2 sm:p-3">
+                <img
+                  src="/assets/alair-foto.png"
+                  alt="Alair Soares — desenvolvedor e criador do SST Digital"
+                  className="block w-auto max-w-full max-h-[560px] object-contain rounded-xl"
+                  loading="eager"
+                />
+              </div>
               <p className="text-[11px] text-text-muted mt-2 text-center">Foto do desenvolvedor — Alair Soares</p>
             </div>
 
