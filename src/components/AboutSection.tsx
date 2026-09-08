@@ -42,7 +42,7 @@ export const AboutSection: React.FC = () => {
             <span>Sobre a Alair Informática</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy font-display tracking-tight leading-tight mb-4">
-            Base técnica sólida, visão de negócios e foco no seu faturamento.
+            Base técnica sólida, visão de negócios e foco em resultados reais para o seu projeto.
           </h2>
           <p className="text-base sm:text-lg text-text-body leading-relaxed">
             Conheça o profissional por trás da marca e os princípios que garantem a segurança e o sucesso do seu projeto.
@@ -59,7 +59,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <p>
-              Com dedicação rigorosa, atenção meticulosa a cada detalhe e sempre alinhado com as tecnologias mais modernas do mercado mundial, transformo planos e necessidades de empresas em sites funcionais, rápidos e perfeitamente adaptados ao que o seu cliente procura.
+              Sou o <strong>criador do SST Digital</strong> — sistema web desenvolvido para organizar processos empresariais, com interface clara e funcionalidade real. O projeto está disponível em <a href="https://sstdigital.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium text-brand-navy hover:text-brand-navy-light">https://sstdigital.vercel.app/</a> para quem deseja conhecer uma solução concreta entregue sob medida.
             </p>
 
             <p className="p-4 rounded-xl bg-surface-subtle border-l-4 border-brand-navy text-text-title font-medium italic">
@@ -126,7 +126,7 @@ export const AboutSection: React.FC = () => {
                     'Atendimento individual e consultivo sem intermediários',
                     'Projetos entregues rigorosamente no prazo estabelecido',
                     'Código limpo, seguro e proprietário para sua empresa',
-                    'Ajustes finos até 100% de aprovação e satisfação',
+                    'Ajustes e revisões conforme o escopo combinado para cada projeto',
                     'Suporte contínuo para manter tudo estável e no ar'
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-sm text-slate-100">

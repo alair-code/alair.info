@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                 <a href="#servicos" className="hover:text-brand-accent transition-colors">Serviços Oferecidos</a>
               </li>
               <li>
-                <a href="#projetos" className="hover:text-brand-accent transition-colors">Portfólio & Projetos</a>
+                <a href="#sobre" className="hover:text-brand-accent transition-colors">Sobre / Quem Sou</a>
               </li>
               <li>
                 <a href="#faq" className="hover:text-brand-accent transition-colors">Perguntas Frequentes</a>
@@ -132,7 +132,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center gap-2 text-center sm:text-left">
             <span>© {new Date().getFullYear()} <strong>Alair Informática</strong>. Todos os direitos reservados.</span>
             <span className="hidden sm:inline">•</span>
-            <span>CNPJ & Desenvolvimento Web Profissional</span>
+            <span>Desenvolvimento Web Profissional</span>
           </div>
 
           <button
