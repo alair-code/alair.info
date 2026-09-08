@@ -70,6 +70,17 @@ export const AboutSection: React.FC = () => {
               "A Alair Informática nasceu para oferecer mais do que um site comum: construímos soluções digitais sob medida, com foco em funcionalidade, clareza e experiência do usuário para cada projeto."
             </p>
 
+            {/* Professional portrait */}
+            <div className="w-full mb-6">
+              <img
+                src="/assets/alair-foto.png"
+                alt="Alair Soares — desenvolvedor e criador do SST Digital"
+                className="w-full max-h-[420px] object-cover rounded-2xl shadow-xl border border-border-card"
+                loading="eager"
+              />
+              <p className="text-[11px] text-text-muted mt-2 text-center">Foto do desenvolvedor — Alair Soares</p>
+            </div>
+
             {/* Academic & Professional Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               <div className="p-4 rounded-xl border border-border-card bg-surface-subtle flex items-start gap-3">
