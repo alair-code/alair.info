@@ -180,7 +180,7 @@ _Enviado pelo formulário de contato do site_`;
               <ul className="text-xs text-text-body space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Orçamento 100% gratuito sem taxa de consultoria inicial</span>
+                  <span>Orçamento gratuito sem taxa de consultoria inicial</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />

@@ -25,7 +25,7 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-base border border-border-light shadow-sm text-xs font-semibold text-text-title mb-6">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-              <span>Projetos empresariais sob medida</span>
+              <span>Projetos digitais sob medida</span>
               <span className="hidden sm:inline text-text-muted">• Atendimento Brasil</span>
             </div>
 
@@ -35,13 +35,13 @@ export const HeroSection: React.FC = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-text-body leading-relaxed max-w-2xl mb-8">
-              Crio <strong className="font-semibold text-brand-navy">sites profissionais, landing pages e sistemas web sob medida</strong> para empresas que precisam transmitir confiança, organizar processos e conquistar mais oportunidades.
+              <strong>sites profissionais, landing pages e sistemas web sob medida</strong> para empresas que precisam transmitir confiança, organizar processos digitais e conquistar oportunidades com clareza.
             </p>
 
             <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-9">
               <a href={getWhatsAppLink('Olá, Alair! Vim pelo site da Alair Informática e gostaria de conversar sobre um projeto.')} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white text-base font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-brand-accent/40 group">
                 <MessageSquare className="w-5 h-5 text-brand-accent" />
-                <span>Vamos conversar sobre seu projeto</span>
+                <span>Falar comigo</span>
                 <ArrowRight className="w-4 h-4 text-brand-accent group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#servicos" className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-surface-base hover:bg-surface-subtle text-brand-navy border border-border-card text-base font-semibold transition-all duration-200 shadow-sm hover:shadow">

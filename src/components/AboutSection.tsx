@@ -62,8 +62,12 @@ export const AboutSection: React.FC = () => {
               Sou o <strong>criador do SST Digital</strong> — sistema web desenvolvido para organizar processos empresariais, com interface clara e funcionalidade real. O projeto está disponível em <a href="https://sstdigital.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium text-brand-navy hover:text-brand-navy-light">https://sstdigital.vercel.app/</a> para quem deseja conhecer uma solução concreta entregue sob medida.
             </p>
 
+            <p className="text-text-body leading-relaxed">
+              O site <strong>alair.info</strong> é uma apresentação profissional do meu trabalho como desenvolvedor de soluções digitais. A proposta é simples: comunicar com clareza o que desenvolvo, como funciona o processo e como entrar em contato — sem exageros, sem números inventados e sem afirmações sem evidência.
+            </p>
+
             <p className="p-4 rounded-xl bg-surface-subtle border-l-4 border-brand-navy text-text-title font-medium italic">
-              "A Alair Informática nasceu para oferecer mais do que um site comum: construímos uma ferramenta confiável, profissional e feita sob medida para impulsionar seus resultados comerciais e consolidar a autoridade da sua marca."
+              "A Alair Informática nasceu para oferecer mais do que um site comum: construímos soluções digitais sob medida, com foco em funcionalidade, clareza e experiência do usuário para cada projeto."
             </p>
 
             {/* Academic & Professional Badges */}
@@ -124,7 +128,7 @@ export const AboutSection: React.FC = () => {
                 <ul className="space-y-3.5 mb-8">
                   {[
                     'Atendimento individual e consultivo sem intermediários',
-                    'Projetos entregues rigorosamente no prazo estabelecido',
+                    'Etapas do projeto combinadas conforme o escopo',
                     'Código limpo, seguro e proprietário para sua empresa',
                     'Ajustes e revisões conforme o escopo combinado para cada projeto',
                     'Suporte contínuo para manter tudo estável e no ar'

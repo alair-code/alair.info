@@ -43,11 +43,11 @@ export const ServicesSection: React.FC = () => {
               <span>Soluções Especializadas</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy font-display tracking-tight leading-tight">
-              Serviços desenvolvidos para gerar resultados comerciais reais
+              Serviços desenvolvidos sob medida para o seu projeto
             </h2>
           </div>
           <p className="text-base text-text-body max-w-md">
-            Do site institucional de alta credibilidade a sistemas web complexos para automatizar a sua operação empresarial.
+            Do site institucional ao sistema web funcional, cada solução é planejada a partir das necessidades do seu projeto.
           </p>
         </div>
 

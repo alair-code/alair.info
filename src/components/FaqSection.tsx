@@ -25,7 +25,7 @@ export const FaqSection: React.FC = () => {
                 <Clock className="w-5 h-5" />
               </div>
               <div className="text-xl sm:text-2xl font-extrabold text-white font-display">Pontualidade</div>
-              <div className="text-xs text-slate-300 mt-1">Entrega no prazo combinado</div>
+              <div className="text-xs text-slate-300 mt-1">Prazos combinados para cada projeto</div>
             </div>
             <div className="pt-4 sm:pt-0">
               <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-2 text-brand-accent">
