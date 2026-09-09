@@ -64,7 +64,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Professional portrait */}
             <div className="w-full mb-6 flex flex-col items-center">
-              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-subtle border-4 border-brand-navy/10 shadow-xl overflow-hidden ring-1 ring-border-card">
+              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-subtle border-4 border-brand-accent/70 shadow-xl overflow-hidden ring-4 ring-brand-accent/10">
                 <img
                   src="/assets/alair-foto.png"
                   alt="Alair Soares — desenvolvedor e criador do SST Digital"
