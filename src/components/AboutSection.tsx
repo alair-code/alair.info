@@ -71,17 +71,17 @@ export const AboutSection: React.FC = () => {
             </p>
 
             {/* Professional portrait */}
-            <div className="w-full mb-6">
-              <div className="w-full rounded-2xl bg-surface-subtle border border-border-card shadow-xl overflow-hidden flex items-center justify-center p-3 sm:p-4">
+            <div className="w-full mb-6 flex flex-col items-center">
+              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-subtle border-4 border-brand-navy/10 shadow-xl overflow-hidden ring-1 ring-border-card">
                 <img
                   src="/assets/alair-foto.png"
                   alt="Alair Soares — desenvolvedor e criador do SST Digital"
-                  className="block w-auto max-w-full max-h-[480px] sm:max-h-[520px] object-contain rounded-xl"
+                  className="block w-full h-full object-cover object-center"
                   loading="eager"
                   decoding="async"
                 />
               </div>
-              <p className="text-[11px] text-text-muted mt-2 text-center">Foto do desenvolvedor — Alair Soares</p>
+              <p className="text-[11px] text-text-muted mt-3 text-center">Alair Soares — desenvolvedor e criador do SST Digital</p>
             </div>
 
             {/* Academic & Professional Badges */}
