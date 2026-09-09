@@ -66,10 +66,10 @@ export const AboutSection: React.FC = () => {
             <div className="w-full mb-6 flex flex-col items-center">
               <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-subtle border-4 border-brand-accent/70 shadow-xl overflow-hidden ring-4 ring-brand-accent/10">
                 <img
-                  src="/assets/alair-foto.png"
+                  src="/assets/alair-foto.webp"
                   alt="Alair Soares — desenvolvedor e criador do SST Digital"
                   className="block w-full h-full object-cover object-[50%_28%] scale-[1.04]"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                 />
               </div>
