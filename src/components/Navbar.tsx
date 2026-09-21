@@ -8,9 +8,7 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -19,6 +17,7 @@ export const Navbar: React.FC = () => {
     { label: 'Início', href: '#inicio' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Serviços', href: '#servicos' },
+    { label: 'Portfólio', href: '#portfolio' },
     { label: 'Dúvidas', href: '#faq' },
     { label: 'Contato', href: '#contato' },
   ];
@@ -41,33 +40,22 @@ export const Navbar: React.FC = () => {
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Monogram & Name */}
-          <a
-            id="nav-brand-logo"
-            href="#inicio"
-            className="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-brand-navy rounded-lg p-1"
-          >
-            <div className="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white font-bold text-lg tracking-wider shadow-md transition-transform duration-300 group-hover:scale-105">
-              <span className="text-brand-accent font-display font-extrabold">A</span>
-              <span className="text-white font-display font-bold">I</span>
+          <a id="nav-brand-logo" href="#inicio" className="group flex items-center gap-3.5 rounded-lg p-1 focus:outline-none focus:ring-2 focus:ring-brand-accent">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-navy text-lg font-bold tracking-wider shadow-md transition-transform duration-300 group-hover:scale-105">
+              <span className="font-display font-extrabold text-brand-accent">A</span><span className="font-display font-bold text-white">I</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-extrabold tracking-tight text-brand-navy font-display leading-tight group-hover:text-brand-navy-light transition-colors">
-                Alair Informática
-              </span>
-              <span className="text-xs text-text-muted font-medium tracking-wide">
-                Soluções Web & Sistemas
-              </span>
+              <span className="font-display text-lg font-extrabold tracking-tight text-brand-navy transition-colors group-hover:text-brand-navy-light">Alair Informática</span>
+              <span className="text-xs font-medium tracking-wide text-text-muted">Soluções Web & Sistemas</span>
             </div>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav id="desktop-nav-links" className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav id="desktop-nav-links" className="hidden items-center gap-1 lg:flex xl:gap-1.5" aria-label="Navegação principal">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="nav-link px-3.5 py-2 text-sm font-medium text-text-body hover:text-brand-navy rounded-lg hover:bg-surface-subtle"
+                className="nav-link rounded-lg px-3.5 py-2 text-sm font-semibold text-text-body hover:bg-surface-subtle hover:text-brand-navy"
               >
                 {link.label}
               </a>
@@ -95,11 +83,11 @@ export const Navbar: React.FC = () => {
               href={getWhatsAppLink('Olá, Alair! Vim pelo site da Alair Informática e gostaria de solicitar um orçamento gratuito.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-premium btn-navy inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-navy text-white text-sm font-semibold tracking-wide hover:bg-brand-navy-light shadow-md focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2"
+              className="btn-premium inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] text-white text-sm font-semibold tracking-wide hover:bg-[#1eb857] shadow-md focus:outline-none focus:ring-2 focus:ring-brand-accent focus:ring-offset-2"
             >
-              <MessageSquare className="w-4 h-4 text-brand-accent fill-brand-accent/20" />
+              <MessageSquare className="w-4 h-4 text-white fill-white/20" />
               <span>Orçamento WhatsApp</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-text-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-white/80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
@@ -111,7 +99,7 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chamar no WhatsApp"
-              className="btn-premium btn-navy p-2 rounded-xl bg-brand-navy text-brand-accent"
+              className="btn-premium rounded-xl bg-[#25D366] p-2 text-white shadow-sm"
             >
               <MessageSquare className="w-4 h-4" />
             </a>
@@ -120,7 +108,9 @@ export const Navbar: React.FC = () => {
               id="mobile-menu-toggle-btn"
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-text-body hover:bg-surface-subtle focus:outline-none focus:ring-2 focus:ring-brand-navy transition-transform duration-200 active:scale-90"
+              className="p-2 rounded-xl text-text-body hover:bg-surface-subtle focus:outline-none focus:ring-2 focus:ring-brand-accent transition-transform duration-200 active:scale-90"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu-drawer"
               aria-label={mobileMenuOpen ? 'Fechar menu' : 'Abrir menu de navegação'}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -129,14 +119,13 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
         <div
           id="mobile-menu-drawer"
           className="sm:hidden bg-surface-base border-b border-border-light px-4 pt-3 pb-6 shadow-e2"
           style={{ animation: 'hero-enter 0.35s var(--ease-premium) both' }}
         >
-          <div className="flex flex-col gap-1.5">
+          <nav className="flex flex-col gap-1.5" aria-label="Navegação mobile">
             {navLinks.map((link, idx) => (
               <a
                 key={link.href}
@@ -148,18 +137,10 @@ export const Navbar: React.FC = () => {
                 {link.label}
               </a>
             ))}
-          </div>
-
-          <div className="mt-4 pt-4 border-t border-border-light flex flex-col gap-3">
-            <a
-              id="mobile-instagram-link"
-              href={BRAND_INFO.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 text-sm font-semibold text-text-body border border-border-light rounded-xl hover:bg-surface-subtle"
-            >
-              <Instagram className="w-4 h-4 text-pink-600" />
-              <span>Acompanhe no Instagram {BRAND_INFO.instagramHandle}</span>
+          </nav>
+          <div className="mt-4 flex flex-col gap-3 border-t border-border-light pt-4">
+            <a id="mobile-instagram-link" href={BRAND_INFO.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 rounded-xl border border-border-light py-2.5 text-sm font-semibold text-text-body hover:bg-surface-subtle">
+              <Instagram className="h-4 w-4 text-pink-600" />Acompanhe no Instagram {BRAND_INFO.instagramHandle}
             </a>
 
             <a
@@ -168,9 +149,9 @@ export const Navbar: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="btn-premium btn-navy flex items-center justify-center gap-2 py-3 rounded-xl bg-brand-navy text-white text-base font-bold shadow-md hover:bg-brand-navy-light"
+              className="btn-premium flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white text-base font-bold shadow-md hover:bg-[#1eb857]"
             >
-              <MessageSquare className="w-5 h-5 text-brand-accent" />
+              <MessageSquare className="w-5 h-5 text-white" />
               <span>Solicitar Orçamento no WhatsApp</span>
             </a>
           </div>
