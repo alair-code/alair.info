@@ -80,7 +80,7 @@ _Enviado pelo formulário de contato do site_`;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16" data-reveal>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-subtle border border-border-light text-xs font-bold uppercase tracking-wider text-brand-navy mb-3">
             <span>Iniciar Projeto</span>
           </div>
@@ -95,7 +95,7 @@ _Enviado pelo formulário de contato do site_`;
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Direct Contact Information & Guarantees */}
-          <div className="lg:col-span-5 space-y-8">
+          <div className="lg:col-span-5 space-y-8" data-reveal>
             
             <div className="rounded-2xl bg-surface-subtle border border-border-card p-6 sm:p-8 space-y-6">
               <h3 className="text-xl font-bold text-brand-navy font-display">
@@ -108,9 +108,9 @@ _Enviado pelo formulário de contato do site_`;
                   href={getWhatsAppLink('Olá, Alair! Gostaria de tirar dúvidas diretamente pelo WhatsApp.')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-base border border-border-light hover:border-emerald-500/50 hover:shadow-sm transition-all group"
+                  className="card-premium flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-base border border-border-light hover:border-emerald-500/50 group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                  <div className="icon-lift w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 shrink-0 group-hover:bg-emerald-500 group-hover:text-white">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
@@ -127,9 +127,9 @@ _Enviado pelo formulário de contato do site_`;
                   href={BRAND_INFO.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-base border border-border-light hover:border-pink-500/50 hover:shadow-sm transition-all group"
+                  className="card-premium flex items-start gap-3.5 p-3.5 rounded-xl bg-surface-base border border-border-light hover:border-pink-500/50 group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-600 shrink-0 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                  <div className="icon-lift w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-600 shrink-0 group-hover:bg-pink-600 group-hover:text-white">
                     <Instagram className="w-5 h-5" />
                   </div>
                   <div>
@@ -172,7 +172,7 @@ _Enviado pelo formulário de contato do site_`;
             </div>
 
             {/* Quick Guarantees Badge */}
-            <div className="p-5 rounded-2xl bg-surface-subtle border border-border-card space-y-3">
+            <div className="card-premium card-glow-line p-5 rounded-2xl bg-surface-subtle border border-border-card space-y-3">
               <div className="flex items-center gap-2 text-sm font-bold text-brand-navy">
                 <ShieldCheck className="w-5 h-5 text-brand-navy" />
                 <span>Garantias da Alair Informática</span>
@@ -196,8 +196,8 @@ _Enviado pelo formulário de contato do site_`;
           </div>
 
           {/* Right Column: High-Converting Form */}
-          <div className="lg:col-span-7">
-            <div className="rounded-2xl bg-surface-base border border-border-card p-6 sm:p-10 shadow-lg relative">
+          <div className="lg:col-span-7" data-reveal>
+            <div className="card-glow-line relative rounded-2xl bg-surface-base border border-border-card p-6 sm:p-10 shadow-e2">
               
               {isSubmitted ? (
                 <div className="text-center py-12 space-y-4">
@@ -215,7 +215,7 @@ _Enviado pelo formulário de contato do site_`;
                       href={getWhatsAppLink(`Olá, Alair! Sou ${formData.nome} da empresa ${formData.empresa} e preenchi o formulário no seu site.`)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-sm shadow-md"
+                      className="btn-premium btn-navy inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-sm shadow-md"
                     >
                       <MessageSquare className="w-4 h-4 text-brand-accent" />
                       <span>Abrir WhatsApp Agora</span>
@@ -381,7 +381,7 @@ _Enviado pelo formulário de contato do site_`;
                     <button
                       id="form-submit-btn"
                       type="submit"
-                      className="w-full py-4 px-6 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-base shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer group"
+                      className="w-full py-4 px-6 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-base shadow-lg flex items-center justify-center gap-3 cursor-pointer group btn-premium btn-navy"
                     >
                       <MessageSquare className="w-5 h-5 text-brand-accent group-hover:scale-110 transition-transform" />
                       <span>Solicitar Orçamento Gratuito via WhatsApp</span>
