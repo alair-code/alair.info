@@ -37,7 +37,7 @@ export const ServicesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6" data-reveal>
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-base border border-border-light text-xs font-bold uppercase tracking-wider text-brand-navy mb-3 shadow-xs">
               <span>Soluções Especializadas</span>
@@ -51,8 +51,7 @@ export const ServicesSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Services Showcase Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12" data-reveal-group>
           {SERVICES_DATA.map((service) => {
             const Icon = serviceIcons[service.iconName] || Globe;
             const isSelected = service.id === selectedServiceId;
@@ -61,11 +60,12 @@ export const ServicesSection: React.FC = () => {
               <div
                 key={service.id}
                 id={`service-card-${service.id}`}
+                data-reveal
                 onClick={() => setSelectedServiceId(service.id)}
-                className={`cursor-pointer rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between border relative text-left group ${
+                className={`card-premium card-glow-line cursor-pointer rounded-2xl p-6 flex flex-col justify-between border relative text-left group ${
                   isSelected
                     ? 'bg-surface-base border-brand-navy shadow-lg ring-1 ring-brand-navy transform -translate-y-1'
-                    : 'bg-surface-base/80 border-border-card hover:border-border-subtle hover:bg-surface-base hover:shadow-md'
+                    : 'bg-surface-base/80 border-border-card hover:border-border-subtle hover:bg-surface-base'
                 }`}
               >
                 {service.highlightBadge && (
@@ -75,7 +75,7 @@ export const ServicesSection: React.FC = () => {
                 )}
 
                 <div>
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-colors ${
+                  <div className={`icon-lift w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
                     isSelected 
                       ? 'bg-brand-navy text-brand-accent' 
                       : 'bg-surface-subtle border border-border-light text-brand-navy group-hover:bg-brand-navy group-hover:text-brand-accent'
@@ -105,11 +105,12 @@ export const ServicesSection: React.FC = () => {
           })}
         </div>
 
-        {/* Detailed Service Deep Dive Panel */}
         <div 
           id="service-detailed-panel"
-          className="rounded-2xl bg-surface-base border border-border-card p-6 sm:p-10 shadow-lg"
+          className="relative rounded-2xl bg-surface-base border border-border-card p-6 sm:p-10 shadow-e2 overflow-hidden"
+          data-reveal
         >
+          <div className="absolute inset-x-16 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent/25 to-transparent" aria-hidden="true" />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             <div className="lg:col-span-7 space-y-5">
@@ -164,7 +165,7 @@ export const ServicesSection: React.FC = () => {
                     href={getWhatsAppLink(`Olá, Alair! Gostaria de solicitar um orçamento para o serviço de ${activeService.title}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-sm shadow-md hover:shadow-lg transition-all duration-200"
+                    className="btn-premium btn-navy w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white font-bold text-sm shadow-md"
                   >
                     <MessageSquare className="w-4 h-4 text-brand-accent" />
                     <span>Solicitar Orçamento no WhatsApp</span>

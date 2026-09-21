@@ -13,7 +13,10 @@ export const Footer: React.FC = () => {
       id="main-footer"
       className="bg-surface-navy-dark text-white border-t border-brand-navy-light/40 pt-16 pb-12 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Luz ambiente discreta no rodapé */}
+      <div className="ambient-light absolute -top-20 left-1/2 -translate-x-1/2 h-56 w-[36rem] max-w-full bg-brand-accent/8" aria-hidden="true" />
+      <div className="ambient-light absolute bottom-0 right-[-6rem] h-64 w-64 bg-brand-blue/10" aria-hidden="true" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-border-navy">
@@ -21,7 +24,7 @@ export const Footer: React.FC = () => {
           {/* Brand Info Column */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-navy border border-brand-navy-light flex items-center justify-center text-white font-bold text-lg tracking-wider">
+              <div className="w-10 h-10 rounded-xl bg-brand-navy border border-brand-navy-light flex items-center justify-center text-white font-bold text-lg tracking-wider shadow-e2 transition-transform duration-300 hover:scale-105">
                 <span className="text-brand-accent font-display font-extrabold">A</span>
                 <span className="text-white font-display font-bold">I</span>
               </div>
@@ -75,22 +78,22 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>
-                <a href="#inicio" className="hover:text-brand-accent transition-colors">Início</a>
+                <a href="#inicio" className="inline-block transition-all duration-300 hover:text-brand-accent hover:translate-x-1">Início</a>
               </li>
               <li>
-                <a href="#sobre" className="hover:text-brand-accent transition-colors">Sobre / Quem Sou</a>
+                <a href="#sobre" className="inline-block transition-all duration-300 hover:text-brand-accent hover:translate-x-1">Sobre / Quem Sou</a>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-brand-accent transition-colors">Serviços Oferecidos</a>
+                <a href="#servicos" className="inline-block transition-all duration-300 hover:text-brand-accent hover:translate-x-1">Serviços Oferecidos</a>
               </li>
               <li>
-                <a href="#sobre" className="hover:text-brand-accent transition-colors">Sobre / Quem Sou</a>
+                <a href="#sobre" className="inline-block transition-all duration-300 hover:text-brand-accent hover:translate-x-1">Sobre / Quem Sou</a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-brand-accent transition-colors">Perguntas Frequentes</a>
+                <a href="#faq" className="inline-block transition-all duration-300 hover:text-brand-accent hover:translate-x-1">Perguntas Frequentes</a>
               </li>
               <li>
-                <a href="#contato" className="hover:text-brand-accent transition-colors">Solicitar Orçamento</a>
+                <a href="#contato" className="inline-block transition-all duration-300 hover:text-brand-accent hover:translate-x-1">Solicitar Orçamento</a>
               </li>
             </ul>
           </div>
@@ -139,10 +142,10 @@ export const Footer: React.FC = () => {
             type="button"
             onClick={scrollToTop}
             aria-label="Voltar ao topo da página"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs transition-colors cursor-pointer"
+            className="btn-premium group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs cursor-pointer"
           >
             <span>Voltar ao topo</span>
-            <ArrowUp className="w-3.5 h-3.5" />
+            <ArrowUp className="w-3.5 h-3.5 transition-transform duration-300 group-hover:-translate-y-0.5" />
           </button>
         </div>
 

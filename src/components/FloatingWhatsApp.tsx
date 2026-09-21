@@ -118,21 +118,29 @@ export const FloatingWhatsApp: React.FC = () => {
           setHasPrompted(false);
         }}
         aria-label="Abrir atendimento no WhatsApp da Alair Informática"
-        className="relative group w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl hover:shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-emerald-400/40 cursor-pointer"
+        className="relative group w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-400/40 cursor-pointer wa-pulse hover:scale-[1.06] active:scale-95"
       >
-        {/* Pulse ring animation */}
-        <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-25 pointer-events-none" />
+        {/* Halo de luz interno — profundidade sutil */}
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 rounded-full bg-gradient-to-b from-white/25 via-transparent to-black/10 pointer-events-none"
+        />
+        {/* Glow externo discreto no hover */}
+        <span
+          aria-hidden="true"
+          className="absolute -inset-1.5 rounded-full bg-emerald-500/25 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        />
 
         <div className="relative">
           {isOpen ? (
-            <X className="w-6 h-6 text-white" />
+            <X className="w-6 h-6 text-white transition-transform duration-300" />
           ) : (
-            <MessageSquare className="w-7 h-7 text-white fill-white/20" />
+            <MessageSquare className="w-7 h-7 text-white fill-white/20 group-hover:scale-110 transition-transform duration-300" />
           )}
         </div>
 
         {/* Status indicator dot */}
-        <span className="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-emerald-300 border-2 border-surface-base" />
+        <span className="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-emerald-300 border-2 border-surface-base shadow-xs" />
       </button>
     </div>
   );

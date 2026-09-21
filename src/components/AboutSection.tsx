@@ -30,9 +30,10 @@ const iconMap = {
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="sobre" className="py-24 bg-surface-base border-t border-border-light relative scroll-mt-12">
+    <section id="sobre" className="py-24 bg-surface-base border-t border-border-light relative overflow-hidden scroll-mt-12">
+      <div className="ambient-light absolute -top-24 left-1/3 h-80 w-80 bg-brand-accent/5" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16" data-reveal>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-subtle border border-border-light text-xs font-bold uppercase tracking-wider text-brand-navy mb-3">
             <span>Sobre a Alair Informática</span>
           </div>
@@ -45,7 +46,7 @@ export const AboutSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
-          <div className="lg:col-span-7 space-y-6 text-text-body text-base sm:text-lg leading-relaxed">
+          <div className="lg:col-span-7 space-y-6 text-text-body text-base sm:text-lg leading-relaxed" data-reveal>
             <p className="text-brand-navy font-medium text-lg sm:text-xl leading-relaxed">
               Sou formado em <strong className="font-bold text-brand-navy">Técnico em Informática</strong> e atualmente estou concluindo minha formação em <strong className="font-bold text-brand-navy">Análise e Desenvolvimento de Sistemas (ADS)</strong>, unindo conhecimento prático e base técnica sólida para entregar soluções digitais de alta qualidade.
             </p>
@@ -64,11 +65,11 @@ export const AboutSection: React.FC = () => {
 
             {/* Professional portrait */}
             <div className="w-full mb-6 flex flex-col items-center">
-              <div className="w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-subtle border-4 border-brand-accent/70 shadow-xl overflow-hidden ring-4 ring-brand-accent/10">
+              <div className="group w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-subtle border-4 border-brand-accent/70 shadow-xl overflow-hidden ring-4 ring-brand-accent/10 transition-shadow duration-500 hover:shadow-2xl">
                 <img
                   src="/assets/alair-foto.webp"
                   alt="Alair Soares — desenvolvedor e criador do SST Digital"
-                  className="block w-full h-full object-cover object-[50%_28%] scale-[1.04]"
+                  className="block w-full h-full object-cover object-[50%_28%] scale-[1.04] transition-transform duration-700 ease-out group-hover:scale-[1.09]"
                   loading="lazy"
                   decoding="async"
                 />
@@ -77,12 +78,12 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="p-4 rounded-xl border border-border-card bg-surface-subtle flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-brand-navy text-brand-accent shrink-0"><GraduationCap className="w-5 h-5" /></div>
+              <div className="card-premium card-glow-line p-4 rounded-xl border border-border-card bg-surface-subtle flex items-start gap-3">
+                <div className="icon-lift p-2 rounded-lg bg-brand-navy text-brand-accent shrink-0"><GraduationCap className="w-5 h-5" /></div>
                 <div><div className="font-bold text-brand-navy text-sm font-display">Técnico em Informática</div><div className="text-xs text-text-muted mt-0.5">Formação prática sólida em infraestrutura e lógica</div></div>
               </div>
-              <div className="p-4 rounded-xl border border-border-card bg-surface-subtle flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-brand-navy text-brand-accent shrink-0"><Award className="w-5 h-5" /></div>
+              <div className="card-premium card-glow-line p-4 rounded-xl border border-border-card bg-surface-subtle flex items-start gap-3">
+                <div className="icon-lift p-2 rounded-lg bg-brand-navy text-brand-accent shrink-0"><Award className="w-5 h-5" /></div>
                 <div><div className="font-bold text-brand-navy text-sm font-display">Análise e Desenv. de Sistemas</div><div className="text-xs text-text-muted mt-0.5">Graduação em conclusão com foco em engenharia de software</div></div>
               </div>
             </div>
@@ -94,9 +95,10 @@ export const AboutSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-surface-navy text-white p-6 sm:p-8 shadow-xl border border-brand-navy-light/40 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-brand-accent/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="lg:col-span-5" data-reveal>
+            <div className="card-glow-line rounded-2xl bg-surface-navy text-white p-6 sm:p-8 shadow-e3 border border-brand-navy-light/40 ring-1 ring-white/5 relative overflow-hidden">
+              <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent/30 to-transparent" aria-hidden="true" />
+              <div className="ambient-light absolute top-0 right-0 w-48 h-48 bg-brand-accent/10" aria-hidden="true" />
               <div className="relative">
                 <div className="text-brand-accent text-xs font-bold uppercase tracking-widest mb-2 font-mono">Compromisso Profissional</div>
                 <h3 className="text-2xl font-bold font-display text-white mb-4">Por que empresas confiam na Alair Informática?</h3>
@@ -106,7 +108,7 @@ export const AboutSection: React.FC = () => {
                     <li key={idx} className="flex items-start gap-3 text-sm text-slate-100"><CheckCircle2 className="w-4 h-4 text-brand-accent shrink-0 mt-0.5" /><span>{item}</span></li>
                   ))}
                 </ul>
-                <a id="about-cta-quote-btn" href={getWhatsAppLink('Olá, Alair! Gostaria de agendar uma conversa sobre o site da minha empresa.')} target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-accent hover:bg-brand-accent-hover text-brand-navy font-bold text-sm transition-all duration-200 shadow-md">
+                <a id="about-cta-quote-btn" href={getWhatsAppLink('Olá, Alair! Gostaria de agendar uma conversa sobre o site da minha empresa.')} target="_blank" rel="noopener noreferrer" className="btn-premium btn-accent w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-accent hover:bg-brand-accent-hover text-brand-navy font-bold text-sm shadow-md">
                   <MessageSquare className="w-4 h-4" /><span>Solicite seu Orçamento Gratuito</span>
                 </a>
               </div>
@@ -119,12 +121,12 @@ export const AboutSection: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl font-bold text-brand-navy font-display tracking-tight mb-3">Diferenciais Competitivos</h3>
             <p className="text-sm sm:text-base text-text-body">Práticas concretas que elevam a qualidade do serviço e protegem o investimento do seu negócio.</p>
           </div>
-          <div id="competitive-differentials-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div id="competitive-differentials-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-reveal-group>
             {COMPETITIVE_DIFFERENTIALS.map((diff) => {
               const IconComp = iconMap[diff.iconName] || CheckCircle2;
-              return <div key={diff.id} id={`diff-card-${diff.id}`} className="p-6 rounded-2xl bg-surface-subtle border border-border-card hover:border-border-subtle hover:bg-surface-base transition-all duration-200 hover:shadow-md flex flex-col justify-between group">
+              return <div key={diff.id} id={`diff-card-${diff.id}`} data-reveal className="card-premium card-glow-line p-6 rounded-2xl bg-surface-subtle border border-border-card hover:border-border-subtle hover:bg-surface-base hover:shadow-e2 flex flex-col justify-between group">
                 <div>
-                  <div className="w-11 h-11 rounded-xl bg-surface-base border border-border-light flex items-center justify-center text-brand-navy mb-5 shadow-xs group-hover:bg-brand-navy group-hover:text-brand-accent transition-all duration-300"><IconComp className="w-5 h-5" /></div>
+                  <div className="icon-lift w-11 h-11 rounded-xl bg-surface-base border border-border-light flex items-center justify-center text-brand-navy mb-5 shadow-xs group-hover:bg-brand-navy group-hover:text-brand-accent"><IconComp className="w-5 h-5" /></div>
                   <h4 className="text-base font-bold text-brand-navy font-display mb-2 leading-snug">{diff.title}</h4>
                   <p className="text-sm text-text-body leading-relaxed">{diff.description}</p>
                 </div>

@@ -18,8 +18,9 @@ export const FaqSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Guarantees Summary Strip */}
-        <div className="rounded-2xl bg-brand-navy text-white p-8 sm:p-10 mb-20 shadow-xl border border-brand-navy-light/40">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        <div className="card-glow-line rounded-2xl bg-brand-navy text-white p-8 sm:p-10 mb-20 shadow-e3 border border-brand-navy-light/40 ring-1 ring-white/5" data-reveal>
+          <div className="absolute inset-x-16 top-0 h-px bg-gradient-to-r from-transparent via-brand-accent/25 to-transparent" aria-hidden="true" />
+          <div className="relative grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/10">
             <div className="pt-4 sm:pt-0">
               <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-2 text-brand-accent">
                 <Clock className="w-5 h-5" />
@@ -53,7 +54,7 @@ export const FaqSection: React.FC = () => {
 
         {/* FAQ Container */}
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-reveal>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-base border border-border-light text-xs font-bold uppercase tracking-wider text-brand-navy mb-3 shadow-xs">
               <HelpCircle className="w-3.5 h-3.5 text-brand-navy" />
               <span>Perguntas Frequentes</span>
@@ -67,13 +68,13 @@ export const FaqSection: React.FC = () => {
           </div>
 
           {/* Accordion list */}
-          <div className="space-y-3">
+          <div className="space-y-3" data-reveal-group>
             {FAQS_DATA.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (
                 <div 
                   key={idx}
-                  className="rounded-xl border border-border-card bg-surface-base overflow-hidden transition-all shadow-xs hover:border-border-subtle"
+                  className="card-premium rounded-xl border border-border-card bg-surface-base overflow-hidden shadow-xs hover:border-border-subtle"
                 >
                   <button
                     type="button"
@@ -86,7 +87,10 @@ export const FaqSection: React.FC = () => {
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-sm text-text-body leading-relaxed border-t border-border-light/60 bg-surface-subtle/30">
+                    <div
+                      className="px-5 pb-5 pt-1 text-sm text-text-body leading-relaxed border-t border-border-light/60 bg-surface-subtle/30"
+                      style={{ animation: 'hero-enter 0.4s var(--ease-premium) both' }}
+                    >
                       {faq.answer}
                     </div>
                   )}
@@ -96,7 +100,7 @@ export const FaqSection: React.FC = () => {
           </div>
 
           {/* WhatsApp Direct Prompt */}
-          <div className="mt-10 p-6 rounded-2xl bg-surface-base border border-border-card text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-10 p-6 rounded-2xl bg-surface-base border border-border-card text-center flex flex-col sm:flex-row items-center justify-between gap-4 card-premium card-glow-line" data-reveal>
             <div className="text-left">
               <div className="text-sm font-bold text-brand-navy">Precisa de uma resposta personalizada para o seu caso?</div>
               <div className="text-xs text-text-muted mt-0.5">Tire suas dúvidas técnicas diretamente com o Alair pelo WhatsApp.</div>
@@ -105,7 +109,7 @@ export const FaqSection: React.FC = () => {
               href={getWhatsAppLink('Olá, Alair! Tenho uma dúvida sobre o desenvolvimento de sites e gostaria de conversar.')}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white text-xs font-bold transition-all shadow-sm"
+              className="btn-premium btn-navy shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navy-light text-white text-xs font-bold shadow-sm"
             >
               <MessageSquare className="w-3.5 h-3.5 text-brand-accent" />
               <span>Tirar Dúvida no WhatsApp</span>
