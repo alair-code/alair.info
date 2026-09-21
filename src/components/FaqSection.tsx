@@ -56,7 +56,7 @@ export const FaqSection: React.FC = () => {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-base border border-border-light text-xs font-bold uppercase tracking-wider text-brand-navy mb-3 shadow-xs">
               <HelpCircle className="w-3.5 h-3.5 text-brand-navy" />
-              <span>Dúvidas Frequentes</span>
+              <span>Perguntas Frequentes</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-navy font-display tracking-tight leading-tight mb-3">
               Perguntas Frequentes

@@ -31,7 +31,7 @@ export const HeroSection: React.FC = () => {
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-extrabold text-brand-navy tracking-tight leading-[1.08] font-display mb-6">
               Tecnologia que transforma sua presença digital em{' '}
-              <span className="relative inline-block text-brand-navy">negócio.<svg className="absolute left-0 -bottom-2 w-full h-3 text-brand-accent/80 -z-10" viewBox="0 0 250 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 9C60 2.5 180 2.5 247 8.5" stroke="currentColor" strokeWidth="6" strokeLinecap="round" /></svg></span>
+              <span className="relative inline-block text-brand-navy">seu negócio.<svg className="absolute left-0 -bottom-2 w-full h-3 text-brand-accent/80 -z-10" viewBox="0 0 250 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 9C60 2.5 180 2.5 247 8.5" stroke="currentColor" strokeWidth="6" strokeLinecap="round" /></svg></span>
             </h1>
 
             <p className="text-lg sm:text-xl text-text-body leading-relaxed max-w-2xl mb-8">
